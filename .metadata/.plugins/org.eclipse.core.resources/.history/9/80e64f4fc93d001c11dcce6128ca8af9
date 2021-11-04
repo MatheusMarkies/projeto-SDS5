@@ -1,0 +1,5 @@
+package com.matheusmarkies.DSvendas.Config;
+
+public class SecurityConfig {
+
+}
