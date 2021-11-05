@@ -1,0 +1,5 @@
+package com.matheusmarkies.DSvendas.dto;
+
+public class SellerDTO {
+
+}
