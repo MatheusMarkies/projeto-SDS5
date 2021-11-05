@@ -1,0 +1,15 @@
+package com.matheusmarkies.DSvendas.Repositories;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.matheusmarkies.DSvendas.Entities.Sale;
+import com.matheusmarkies.DSvendas.Entities.Seller;
+import com.matheusmarkies.DSvendas.dto.SaleSumDTO;
+
+public interface SaleRepositories extends JpaRepository<Sale, Long>{
+
+	List<SaleSumDTO> amountGroupedSeller();
+	
+}

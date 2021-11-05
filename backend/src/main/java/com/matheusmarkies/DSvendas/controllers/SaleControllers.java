@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.matheusmarkies.DSvendas.Repositories.SellerRepositories;
 import com.matheusmarkies.DSvendas.dto.SaleDTO;
+import com.matheusmarkies.DSvendas.dto.SaleSuccessDTO;
+import com.matheusmarkies.DSvendas.dto.SaleSumDTO;
 import com.matheusmarkies.DSvendas.services.SaleService;
 
 @RestController
@@ -21,14 +23,22 @@ public class SaleControllers {
 
 	@Autowired
 	private SaleService saleService;
-	
-	@Autowired
-	private SellerRepositories sellerRepositories;
-	
-	@Transactional (readOnly = true)
+
+	@GetMapping
 	public ResponseEntity<Page<SaleDTO>> findAll(Pageable pageable){
-		sellerRepositories.findAll();
 		Page<SaleDTO> list = saleService.findAll(pageable);
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping(value = "/sum-by-seller")
+	public ResponseEntity<List<SaleSumDTO>> amountGroupedSeller(){
+		List<SaleSumDTO> list = saleService.amountGroupedSeller();
+		return ResponseEntity.ok(list);
+	}
+	
+	@GetMapping(value = "/success-by-seller")
+	public ResponseEntity<List<SaleSuccessDTO>> successGroupedSeller(){
+		List<SaleSuccessDTO> list = saleService.successGroupedSeller();
 		return ResponseEntity.ok(list);
 	}
 	
