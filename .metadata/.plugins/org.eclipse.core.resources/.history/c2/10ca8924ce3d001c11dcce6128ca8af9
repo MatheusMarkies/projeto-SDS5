@@ -1,0 +1,5 @@
+package com.matheusmarkies.DSvendas.Entities;
+
+public class Sale {
+
+}

@@ -60,7 +60,6 @@ INDEX VERSION 1.131+D:\OneDrive - Etec Centro Paula Souza\Projetos\Project SDS5\
 3451915635.index
 1584377223.index
 1011100019.index
-1965174767.index
 2121825462.index
 1865797976.index
 1925968534.index
