@@ -4,21 +4,16 @@ import java.io.Serializable;
 
 import com.matheusmarkies.DSvendas.Entities.Seller;
 
-public class SellerDTO implements Serializable{
-	
-	/**
-	 * 
-	 */
+public class SellerDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	private Long id;
 	private String name;
 	
 	public SellerDTO() {
-		// TODO Auto-generated constructor stub
 	}
-	
+
 	public SellerDTO(Long id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}
@@ -27,6 +22,7 @@ public class SellerDTO implements Serializable{
 		this.id = entity.getId();
 		this.name = entity.getName();
 	}
+	
 
 	public Long getId() {
 		return id;
@@ -42,6 +38,5 @@ public class SellerDTO implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
-	}
-	
+	}	
 }

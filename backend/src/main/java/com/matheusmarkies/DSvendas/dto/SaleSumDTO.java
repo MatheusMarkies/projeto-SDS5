@@ -4,31 +4,26 @@ import java.io.Serializable;
 
 import com.matheusmarkies.DSvendas.Entities.Seller;
 
-public class SaleSumDTO implements Serializable{
-
-	/**
-	 * 
-	 */
+public class SaleSumDTO implements Serializable  {
 	private static final long serialVersionUID = 1L;
-	private String name;
+	
+	private String sellerName;
 	private Double sum;
 	
 	public SaleSumDTO() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public SaleSumDTO(Seller seller, Double sum) {
-		super();
-		this.name = seller.getName();
+		this.sellerName = seller.getName();
 		this.sum = sum;
 	}
 
-	public String getName() {
-		return name;
+	public String getSellerName() {
+		return sellerName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSellerName(String sellerName) {
+		this.sellerName = sellerName;
 	}
 
 	public Double getSum() {
@@ -38,5 +33,4 @@ public class SaleSumDTO implements Serializable{
 	public void setSum(Double sum) {
 		this.sum = sum;
 	}
-
 }

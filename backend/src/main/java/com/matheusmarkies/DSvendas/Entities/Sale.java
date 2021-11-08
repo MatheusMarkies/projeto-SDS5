@@ -10,30 +10,28 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.Cascade;
-import org.hibernate.annotations.CascadeType;
-
 @Entity
-@Table (name = "tb_sales")
+@Table(name = "tb_sales")
 public class Sale {
-
+	
+	
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer visited;
 	private Integer deals;
 	private Double amount;
 	private LocalDate date;
-
+	
+	
 	@ManyToOne
-	@JoinColumn (name = "seller_id")
+	@JoinColumn(name = "seller_id")
 	private Seller seller;
 	
 	public Sale() {
-		// TODO Auto-generated constructor stub
 	}
 
-	public Sale(long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
+	public Sale(Long id, Integer visited, Integer deals, Double amount, LocalDate date, Seller seller) {
 		this.id = id;
 		this.visited = visited;
 		this.deals = deals;
@@ -42,11 +40,11 @@ public class Sale {
 		this.seller = seller;
 	}
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -89,5 +87,4 @@ public class Sale {
 	public void setSeller(Seller seller) {
 		this.seller = seller;
 	}
-	
 }
